@@ -5,7 +5,6 @@
     <!--CSS BOOTSTRAP-->
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <script src="scripts.js"></script>
 </head>
 <body>
     <!--BARRA DE NAVEGACIÓN-->
@@ -19,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav md-3 ms-md-auto">
                     <li class="nav-item">
-                        <button type="button" class="btn btn-outline-light" onclick="showOrder()">Carrito</button>
+                        <button type="button" class="btn btn-outline-light" id="checkout" onclick="showOrder()">Carrito</button>
                         <!-- <a class="nav-link" onclick="showOrder()">
                           <i class="fas fa-shopping-cart"></i>  Carrito
                    <li class="nav-item">
@@ -37,6 +36,8 @@
             <div id="product-cards-car" class="product-cards"></div>
             <h1 class="title">PC</h1>
             <div id="product-cards-pc" class="product-cards"></div>
+            <h1 class="title">Cocina</h1>
+            <div id="product-cards-cocina" class="product-cards"></div>
         </div>
 
 <!-- FORMULARIO DE ORDENES -->
@@ -146,5 +147,7 @@
     </div>
     </div>
     </div>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!--SCRIPTS-->
+    <script src="scripts.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script> <!-- BOOTSTRAP SCRIPT -->
 </body>

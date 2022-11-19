@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 /**Token de Mercado pago */
 mercadopago.configure({
   access_token:
-    "TEST-", /**Falta autenticación en la cuenta */
+    "TEST-4981853158044338-111823-656a24607594a29e4b125b45a7330864-441636117", /**Falta autenticación en la cuenta */
 });
 
 app.use(express.json());

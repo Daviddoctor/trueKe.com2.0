@@ -14,7 +14,7 @@ function add(productId, price) {
   console.log(productId, price);
   carrito.push(productId);
   total = total + price;
-  document.getElementById("checkout").innerHTML = `Carrito $${total}`;
+ // document.getElementById("checkout").innerHTML = `Carrito $${total}`;
   displayProducts();
 }
 
@@ -119,6 +119,9 @@ function displayProducts() {
 
   const pc = productList.filter((p) => p.category === "pc");
   displayProductsByType(pc, "product-cards-pc");
+
+  const cocina = productList.filter((p) => p.category === "cocina");
+  displayProductsByType(cocina, "product-cards-cocina");
 }
 /**Esta función va a iterar por cada uno de los productos creados en Index.html y va a generar el HTML */
 
