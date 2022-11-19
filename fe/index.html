@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!--CSS BOOTSTRAP-->
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">trueKe.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav md-3 ms-md-auto">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light" onclick="showOrder()">Carrito</button>
+                        <!-- <a class="nav-link" onclick="showOrder()">
+                          <i class="fas fa-shopping-cart"></i>  Carrito
+                   <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" onclick="showOrder()">Carrito</a> -->
+                    </li>
+                </ul>
+    </nav>
+
+    <!-- PRODUCTOS -->
+    <div id="page-content" class="page-content">
+        <div id="all-products" class="all-products">
+            <h1 class="title">Gym</h1>
+            <div id="product-cards-gym" class="product-cards"></div>
+            <h1 class="title">Cars</h1>
+            <div id="product-cards-car" class="product-cards"></div>
+            <h1 class="title">PC</h1>
+            <div id="product-cards-pc" class="product-cards"></div>
+        </div>
+
+<!-- FORMULARIO DE ORDENES -->
+        <div id="order" class="order">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="card mt-4 text-center">
+                        <div>
+                            <div class="card-header">
+                                <img src="/images/trueKe_logo.png" class="circular--square" href="/">
+                                <div class="card-body">
+                                    <h1>Orden:</h1>
+                                    <h2 id="order-total">Total: $150</h2>
+                                    <table id="order-table" class="order-table">
+                                        <tr>
+                                            <th>Cantidad</th>
+                                            <th>Detalle</th>
+                                            <th>Subtotal</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Pesas</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Banco ajustable</td>
+                                            <td>100</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FORMULARIO DE PAGO -->
+            <form>
+                <h1>Dirección de envío:</h1>
+                <div class="row g-2">
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" name="name" class="form-control" id="floatingInputGrid">
+                            <label for="floatingInputGrid">Nombre Completo:</label>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="email" name="email" class="form-control" id="floatingInputGrid"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con
+                                    nadie más.</div>
+                                <label for="floatingInputGrid">Email address:</label>
+                            </div>
+
+                            <div class="col-md">
+                                <div class="form-floating">
+                                    <input type="text" name="phone" class="form-control" id="floatingInputGrid">
+                                    <label for="floatingInputGrid">Teléfono:</label>
+                                </div>
+
+                                <div class="col-md">
+                                    <div class="form-floating">
+                                        <input type="text" name="addressLine1" class="form-control"
+                                            id="floatingInputGrid">
+                                        <label for="floatingInputGrid">Dirección 1</label>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <div class="form-floating">
+                                            <input type="text" name="addressLine2" class="form-control"
+                                                id="floatingInputGrid">
+                                            <label for="floatingInputGrid">Dirección 2</label>
+                                        </div>
+
+                                        <div class="col-md">
+                                            <div class="form-floating">
+                                                <input type="text" name="city" class="form-control"
+                                                    id="floatingInputGrid">
+                                                <label for="floatingInputGrid">Ciudad</label>
+                                            </div>
+
+                                            <div class="col-md">
+                                                <div class="form-floating">
+                                                    <input type="text" name="postalCode" class="form-control"
+                                                        id="floatingInputGrid">
+                                                    <label for="floatingInputGrid">Código postal:</label>
+                                                </div>
+
+                                                <div class="col-md">
+                                                    <div class="form-floating">
+                                                        <input type="text" name="state" class="form-control"
+                                                            id="floatingInputGrid">
+                                                        <label for="floatingInputGrid">Departamento:</label>
+                                                    </div>
+                                                </div>
+            </form>
+            <!-- Botónes Formulario -->
+            <div id="order-actions" class="order-actions">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-outline-secondary btn-lg" type="button"
+                        onclick="displayProducts()">Volver</button>
+                    <button class="btn btn-outline-success btn-lg" type="button" onclick="pay()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
