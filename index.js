@@ -24,14 +24,14 @@ app.post("/api/pay", async (req, res) => {
   const order = req.body;
   const ids = order.items.map((p) => p.id);
   const productsCopy = await repository.read();
-/**Configuración Metodo de pago */
+  /**Configuración Metodo de pago */
 
   let preference = {
     items: [],
     back_urls: {
-      success: "http://localhost:3000/feedback",
-      failure: "http://localhost:3000/feedback",
-      pending: "http://localhost:3000/feedback",
+      "success": "http://localhost:3000/feedback",
+			"failure": "http://localhost:3000/feedback",
+			"pending": "http://localhost:3000/feedback"
     },
     auto_return: "approved",
   };

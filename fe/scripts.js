@@ -14,7 +14,7 @@ function add(productId, price) {
   console.log(productId, price);
   carrito.push(productId);
   total = total + price;
- // document.getElementById("checkout").innerHTML = `Carrito $${total}`;
+ document.getElementById("checkout").innerHTML = `Carrito $${total}`;
   displayProducts();
 }
 
@@ -71,7 +71,6 @@ async function pay() {
 
     /**Script de mercadopago */
     var script = document.createElement("script");
-
     // The source domain must be completed according to the site for which you are integrating.
     // For example: for Argentina ".com.ar" or for Brazil ".com.br".
     script.src =
@@ -91,8 +90,8 @@ async function pay() {
     document.getElementById("postalCode").disabled = true;
     document.getElementById("state").disabled = true;
     document.getElementById("country").disabled = true;
-  } /**Permite indicar que no hay Stock */ catch {
-    window.alert("Sin stock");
+  }catch {
+    window.alert("Sin stock"); /**Permite indicar que no hay Stock */ 
   }
 
   /**Permite vaciar el carrito cuando se hacen simultaneas compras y no hay stock */
